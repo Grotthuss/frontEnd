@@ -1,6 +1,6 @@
 export const logErrorToServer = async (errorMessage: string) => {
     try {
-        await fetch('https://localhost:44372/api/Home/LogError', {
+        await fetch('https://flipcardsbc.azurewebsites.net/api/Home/LogError', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

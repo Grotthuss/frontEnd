@@ -15,7 +15,7 @@ const Signup: React.FC = () => {
 
         try {
             if(password1 === password2){
-            const response = await fetch(`https://localhost:44372/api/Home/Register`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/Register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

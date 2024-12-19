@@ -27,7 +27,7 @@ const AddCardSet: React.FC<AddCardSetProps> = ({ userId, onAdd }) => {
         };
 
         try {
-            const validationResponse = await fetch(`https://localhost:44372/api/Home/ValidateSet`, {
+            const validationResponse = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/ValidateSet`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const AddCardSet: React.FC<AddCardSetProps> = ({ userId, onAdd }) => {
                 return;
             }
 
-            const response = await fetch(`https://localhost:44372/api/Home/CreateFullSet`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/CreateFullSet`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

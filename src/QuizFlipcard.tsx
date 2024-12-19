@@ -39,7 +39,7 @@ const QuizFlipCard: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId}/${setId}/GetCardSet`);
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/${setId}/GetCardSet`);
             if (!response.ok) {
                 throw new Error(Errors.NETWORK);
             }
@@ -59,7 +59,7 @@ const QuizFlipCard: React.FC = () => {
 
     const fetchActivePlayers = async () => {
         try {
-            const response = await fetch('https://localhost:44372/api/Home/ActivePlayerCount');
+            const response = await fetch('https://flipcardsbc.azurewebsites.net/api/Home/ActivePlayerCount');
             if (!response.ok) {
                 throw new Error('Failed to fetch active players count.');
             }
@@ -72,7 +72,7 @@ const QuizFlipCard: React.FC = () => {
 
     const startGame = async () => {
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId}/StartGame`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/StartGame`, {
                 method: 'POST',
             });
 
@@ -86,7 +86,7 @@ const QuizFlipCard: React.FC = () => {
 
     const endGame = async () => {
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId}/EndGame`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/EndGame`, {
                 method: 'POST',
             });
 

@@ -28,7 +28,7 @@ const DeleteCards: React.FC = () => {
 
             try {
                 setLoading(true);
-                const response = await fetch(`https://localhost:44372/api/Home/${userId}/${setId}/GetCardSet`);
+                const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/${setId}/GetCardSet`);
                 if (!response.ok) {
                     throw new Error(Errors.NETWORK);
                 }
@@ -55,7 +55,7 @@ const DeleteCards: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId},${setId}/${cardId}/DeleteCard`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId},${setId}/${cardId}/DeleteCard`, {
                 method: 'DELETE',
             });
 

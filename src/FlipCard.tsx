@@ -34,7 +34,7 @@ const FlipCard: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId}/${id}/GetCardSet`);
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/${id}/GetCardSet`);
 
             if (!response.ok) {
                 throw new Error(Errors.NETWORK);
@@ -66,7 +66,7 @@ const FlipCard: React.FC = () => {
         };
 
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId}/${id}/CreateCard`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/${id}/CreateCard`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newCard),

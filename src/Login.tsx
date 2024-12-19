@@ -13,7 +13,7 @@ const Login: React.FC = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/Login`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/Login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

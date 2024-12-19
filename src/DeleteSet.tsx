@@ -29,7 +29,7 @@ const DeleteSets: React.FC = () => {
             setLoading(true);
             setError(null);
             try {
-                const response = await fetch(`https://localhost:44372/api/Home/${userId}/GetAllSets`);
+                const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/GetAllSets`);
                 if (!response.ok) {
                     throw new Error(Errors.NETWORK);
                 }
@@ -47,7 +47,7 @@ const DeleteSets: React.FC = () => {
 
     const deleteCardSet = async (setId: number) => {
         try {
-            const response = await fetch(`https://localhost:44372/api/Home/${userId}/${setId}/DeleteSet`, {
+            const response = await fetch(`https://flipcardsbc.azurewebsites.net/api/Home/${userId}/${setId}/DeleteSet`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
